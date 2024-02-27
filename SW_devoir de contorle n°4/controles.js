@@ -21,8 +21,8 @@ function test() {
     date = document.getElementById("date").value;
     expediteur = document.getElementById("expediteur").value;
     destinatatire = document.getElementById("destinatatire").value;
-    // de = document.getElementById("de").selectedIndex;
-    // vers = document.getElementById("vers").selectedIndex;
+    de = document.getElementById("de").selectedIndex;
+    vers = document.getElementById("vers").selectedIndex;
     poids = document.getElementById("poids").value;
     tel = document.getElementById("tel").value;
 
@@ -37,11 +37,11 @@ function test() {
         alert("Expediteur ou destinateur invallide !!");
         return false;
     } 
-    // else if (de == vers) {
-    //     alert("ville de dapart et d'arrivée doivent etre differentes invallide ");
-    //     return false;
-    // } 
-    else if (poids>0 ) {
+    else if (de == vers) {
+        alert("ville de dapart et d'arrivée doivent etre differentes invallide ");
+        return false;
+    } 
+    else if (Number(poids)<1 ) {
         alert("poids invallide");
         return false;
     } else if (tel == "" || tel[0] != 9 & tel[0] != 5 & tel[0] != 2 & tel[0] != 4 || !Num(tel)) {
