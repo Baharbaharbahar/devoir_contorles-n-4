@@ -1,11 +1,4 @@
 <?php
-$date=$_POST["date"];
-$destinatatire=$_POST["destinatatire"];
-$de=$_POST["de"];
-$vers=$_POST["vers"];
-$poids=$_POST["poids"];
-$livraison=$_POST["livraison"];
-$tel=$_POST["tel"];
 require("config.php");
 $conn=mysqli_connect($server,$username,$password,$bd) or die ("Probleme de connxion au serveur ou à la base de données");
 $sql="select* from livraison ;";
